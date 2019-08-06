@@ -307,6 +307,41 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                     
 
                     
+                        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fa fa-music"></i>&nbsp;&nbsp;音乐推荐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'false' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'false' === 'true',
+        listMaxHeight: '',
+        audio: JSON.parse('[{"name":"Cracks Invisible","artist":"AnimeVibe","url":"http://pv9249g5v.bkt.clouddn.com/%E5%96%B5%E6%AD%A5%E5%B0%8F%E9%9B%A8%E4%B8%AD%20-%20Cracks%20Invisible%20%28%E4%BD%9A%E7%97%95%29.mp3","cover":"https://pic.superbed.cn/item/5d47340b451253d1786244b4.jpg"},{"name":"。","artist":"。","url":"/medias/music/music2.mp3","cover":"/medias/music/cover2.png"},{"name":"Shape of You","artist":"J.Fla","url":"http://xxx.com/music3.mp3","cover":"http://xxx.com/music-cover3.png"}]')
+    });
+});
+</script>
+                    
 
                     
                         <link rel="stylesheet" href="/libs/dplayer/DPlayer.min.css">
